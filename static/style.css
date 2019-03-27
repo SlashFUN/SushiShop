@@ -1,0 +1,50 @@
+        html,body{
+            height:100%;
+            max-height:100%;
+            font-family: 'Roboto', sans-serif;
+        }
+        .top-container{
+           /*margin-top: 10%;*/
+            padding-top: 10%;
+        }
+        .general-container
+        {
+            /*{background-color: silver;#}
+            //background: url({% static 'img/image.jpg' %});
+            */background:url("img/sushi.jpg");
+        height: 100%;
+        }
+        .general-container form
+        {
+            margin-top: 2px;
+        }
+
+
+  .general-container form label
+  {
+      color: azure;
+      font-weight: 100;
+
+  }
+.title
+{
+                font-weight: 300;
+            line-height: 50px;
+    color : darksalmon;
+    text-align: center;
+    text-shadow: 3px 3px 1px black;
+}
+
+.orange-btn{
+    background-color: darkorange;
+    border-width: 1px;
+    margin-left: 20%;
+    border-color: chocolate;
+}
+.orange-btn:hover{
+    background-color: indigo;
+    border-width: 1px;
+    margin-left: 20%;
+    border-color: indigo;
+
+}

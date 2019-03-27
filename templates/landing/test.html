@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i&amp;subset=cyrillic-ext" rel="stylesheet">
+    <!-- Custom styles-->
+     <link rel="stylesheet" type="text/css" href ="{% static 'style.css' %}">
+  <link href=https://fonts.googleapis.com/ css?family=Fira+Sans+Condensed" rel="stylesheet" type='text/css'>
+
+
+</head>
+
+ <body>
+ <div class="general-container">
+ <div class = 'container top-container'> <!-- Визуальный контейнер на странице-->
+        <div class = "row"> <!-- Один ряд кирпичей ( ширина контейнера)-->
+            <div class="col-lg-8.offset-md-4"> <!-- 10 колонок, отступ на 2 колонки-->
+               <h1 class="title"><strong>{{ name }}</strong> <br>
+                Our shop will open soon, leave your e-mail for receive latest news in form below: </h1>
+                <div>
+                    <form action="" method="post" id="form" class="form-inline justify-content-center"> {% csrf_token %} <!--форма + таг добавляет скрытую форму, которая определяет отправку только с страницы сервер-->
+                    <div class='form-group'>
+                        <label> Your email: </label>
+                        <input type="email" name="{{ form.email.name }}" class = "form-control" >
+                    </div>
+                        <div class='form-group'>
+                            <label> Your name: </label>
+                            <input type="text" name="{{ form.name.name }}" class = "form-control">
+                    </div>
+                        <div>
+                            <button type="submit" class = 'btn btn-primary orange-btn'>Send</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <script src="../../static/common.js"></script>
+ </body>
+</html>
